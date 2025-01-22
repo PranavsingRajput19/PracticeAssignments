@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/flightSelectionFragment">
+
+    <fragment
+        android:id="@+id/flightSelectionFragment"
+        android:name="com.example.travelapp.FlightSelectionFragment"
+        tools:layout="@layout/fragment_flight_selection">
+        <action
+            android:id="@+id/action_flightSelectionToBookingConfirmation"
+            app:destination="@id/bookingConfirmationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookingConfirmationFragment"
+        android:name="com.example.travelapp.BookingConfirmationFragment"
+        tools:layout="@layout/fragment_booking_confirmation">
+        <argument
+            android:name="flightId"
+            app:argType="string" />
+    </fragment>
+</navigation>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/exerciseListFragment">
+
+    <fragment
+        android:id="@+id/exerciseListFragment"
+        android:name="com.example.fitnessapp.ExerciseListFragment"
+        tools:layout="@layout/fragment_exercise_list">
+        <action
+            android:id="@+id/action_exerciseListToExerciseDetail"
+            app:destination="@id/exerciseDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/exerciseDetailFragment"
+        android:name="com.example.fitnessapp.ExerciseDetailFragment"
+        tools:layout="@layout/fragment_exercise_detail">
+        <argument
+            android:name="exerciseId"
+            app:argType="string" />
+    </fragment>
+</navigation>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/userListFragment">
+
+    <fragment
+        android:id="@+id/userListFragment"
+        android:name="com.example.socialmediaapp.UserListFragment"
+        tools:layout="@layout/fragment_user_list">
+        <action
+            android:id="@+id/action_userList_to_userProfile"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.example.socialmediaapp.UserProfileFragment"
+        tools:layout="@layout/fragment_user_profile">
+        <argument
+            android:name="userId"
+            app:argType="integer" />
+    </fragment>
+</navigation>
